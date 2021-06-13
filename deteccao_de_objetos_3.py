@@ -8,7 +8,7 @@ import numpy as np
 import os
 
 #constantes do modelo Yolo
-CONFIDENCE_MIN  = 0.4
+CONFIDENCE_MIN  = 0.4  #alterar o indice de confiança de acordo com as imagens que está trabalhando.
 NMS_THRESHOLD = 0.2
 MODEL_BASE_PATH = 'yolo-coco'  ## Utilizar o seu modelo, criar uma pasta com este nome e colocar os arquivos
                                 ## de peso, nomes e configs.
