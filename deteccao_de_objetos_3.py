@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jun 12 23:25:31 2021
-
-@author: Thales de Freitas
+Código baseado na Master Class de Visão computacional de Carlos Melo, Sigmoidal.
 """
 
 import cv2
@@ -12,8 +10,10 @@ import os
 #constantes do modelo Yolo
 CONFIDENCE_MIN  = 0.4
 NMS_THRESHOLD = 0.2
-MODEL_BASE_PATH = r'C:\Users\Thales de Freitas\Desktop\Projetos em Python\Udemy\Computer Vision\yolo-coco'
-VIDEO_BASE_PATH = r'C:\Users\Thales de Freitas\Desktop\Projetos em Python\Udemy\Computer Vision\vigilancia.mp4'
+MODEL_BASE_PATH = 'yolo-coco'  ## Utilizar o seu modelo, criar uma pasta com este nome e colocar os arquivos
+                                ## de peso, nomes e configs.
+    
+VIDEO_BASE_PATH = 'vigilancia.mp4' #colocar o endereço do vídeo
 
 
 #extrair os nomes das classes a partir do arquivo salvo
@@ -40,7 +40,7 @@ ln = [ln[i[0]-1] for i in net.getUnconnectedOutLayers()]
 
 
 vs = cv2.VideoCapture(VIDEO_BASE_PATH)
-out = cv2.VideoWriter(r'C:\Users\Thales de Freitas\Desktop\teste.mp4', -1, 10.0, (1280,720))
+out = cv2.VideoWriter('colocar o endereço onde você quer salvar o vídeo', -1, 10.0, (1280,720))
 
 print('[+]Iniciando a Captura')
 while True:
