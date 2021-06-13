@@ -101,11 +101,13 @@ while True:
                     cv2.rectangle(frame, (x,y), (x+w,y+h), color_picked)
                     cv2.putText(frame,text,(x,y-5),cv2.FONT_HERSHEY_SIMPLEX,0.5,color_picked,2)
                     cv2.putText(frame,text2,(400,100),cv2.FONT_HERSHEY_SIMPLEX,2,(0,0,255),3)
+            #salvar o frame para compor o vídeo
             out.write(frame)
+            #exibir o vídeo
             cv2.imshow('frame',frame)
     
             key = cv2.waitKey(1) & 0xFF
-    
+            #para de exibir o frame ao clicar em q minusculo
             if key == ord('q'):
                 break
     
